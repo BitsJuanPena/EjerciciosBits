@@ -1,0 +1,58 @@
+Comandos Drush - Ejercicio 1
+
+composer require drupal/business
+drush dl business	
+drush en nusiness
+
+//habilitar tema 
+drush theme:enable business 
+
+//Consultar el listado de variables de configuración y localizar el encargado de almacenar el tema de administración.
+-pendiente drush variable-get 
+
+//Cambia el tema de administración editando el objeto de configuración correspondiente
+-   drush vset admin_theme garland
+
+// Vaciar la caché completa del sitio.
+drush cache:clear
+drush cache:all
+
+//Comprobar accediendo al sitio que el tema de administración ha cambiado.
+
+Comandos Drush - Ejercicio 2
+
+//Crear el rol "Gestor Drush" (gestordrush). 
+drush role:create gestordrush "Gestor Drush"
+
+//Asignar los permisos "Acceder a la página de resumen de contenido" y "Administrar contenido"
+drush role:perm:add gestordrush "administer nodes"
+drush role:perm:add gestordrush "access content overview"
+
+//Crear el usuario "demodrush"
+drush user:create demodrush --mail="demodruh@bits.com" --password="123456"
+
+//Asignar al usuario el rol Gestor Drush
+drush user:role:add gestordrush demodrush
+
+//Cambiar la contraseña del usuario a "demodrush".
+drush user:password demodrush 123789
+
+//Bloquear el usuario.
+drush user:block demodrush 
+
+//////////////////////////////////////////////////////////////////////////////////
+
+Comandos de Drupal Console
+
+Comandos Drupal console- Ejercicio 1
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+Creación de módulos - Ejercicio 1
+
+drush pm:enable training_drupal_8
+drush pm:uninstall training_drupal_8
+
+
+

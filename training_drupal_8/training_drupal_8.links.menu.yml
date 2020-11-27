@@ -1,0 +1,4 @@
+training_drupal_8.hello:
+  title: Page Training Drupal 8
+  route_name: training_drupal_8.hello
+  expanded: TRUE

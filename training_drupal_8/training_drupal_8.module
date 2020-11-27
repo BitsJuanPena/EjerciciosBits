@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * archivo de ejemplo para el modulo
+ * @utor ing. Juan Carlos Peña
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/*
+ * @see hook_help()
+ */
+
+function training_drupal_8_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'training_drupal_8.contenido':
+      // Help text for the simple page registered for this path.
+      return t('This is help text for the page.');
+
+    case 'help.page.training_drupal_8':
+      // Help text for the admin section, using the module name in the path.
+      return t("This is help text created in page Training Drupal 8' implementation of hook_help().");
+  }
+}
