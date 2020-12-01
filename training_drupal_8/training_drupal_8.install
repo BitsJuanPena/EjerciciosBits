@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * file install and uninstal for module
+ * @utor ing. Juan Carlos Peña
+ */
+
+use Drupal\training_drupal_8\Fixtures;
+
+
+function training_drupal_8_install() {
+
+  $var_t_8 = \Drupal::state()->set("tra_8","val_tra_8");
+  dpm($var_t_8);
+}
+
+function training_drupal_8_uninstall() {
+    
+    Drupal::state()->delete("tra_8");
+
+}

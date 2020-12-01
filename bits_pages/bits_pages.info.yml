@@ -1,0 +1,8 @@
+name: BITS Pages
+type: module
+description: 'Description BITS Pages'
+package: BITS
+core: 8.x
+dependencies:
+  - training_drupal_8:training_drupal_8
+

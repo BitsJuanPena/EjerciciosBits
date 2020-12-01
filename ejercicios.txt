@@ -45,6 +45,7 @@ drush user:block demodrush
 Comandos de Drupal Console
 
 Comandos Drupal console- Ejercicio 1
+pendiente
 
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -53,6 +54,74 @@ Creación de módulos - Ejercicio 1
 
 drush pm:enable training_drupal_8
 drush pm:uninstall training_drupal_8
+drush pm:enable training_drupal_8
+
+Creación de módulos - Ejercicio 2 - Comandos drush y comandos Drupal console
+
+//Usando comandos de Drush, comprobar el estado del módulo Training Drupal 8.
+drush pm:list
+
+//Usando comandos de Drupal Console, instala el módulo Training Drupal 8.
+pendiente
+
+
+//Usando comandos de Drush, sube e instala el módulo Admin Toolbar (y submódulo Admin Toolbar Tools)
+composer require drupal/admin_toolbar
+drush pm:enable admin_toolbar, admin_toolbar_tools
+
+//Usando comandos de Drupal Console, 
+pendiente crear el módulo Training Drupal 8 Console (training_d8_console), con las siguientes características:
+pendiente Añadir una descripción, y el grupo BITS.
+pendiente El módulo dependerá de Pathauto
+pendiente No crear inicialmente el archivo.module
+pendiente Generar el módulo y comprobar que se ha generado correctamente.
+pendiente Usando comandos de Drupal Console:
+pendiente Añadir el archivo.module al módulo anterior.
+pendiente Instalar el módulo.
+
+
+Creación de módulos - Ejercicio 3
+
+Implementa hook_install() donde se instala una variable de estado y se crea un nuevo término en el vocabulario Tags.
+Desinstala y reinstala el módulo para poder ver los cambios introducidos. 
+pendiente //Comprueba en el editor de Variables de estado de Devel (instala el módulo), que la nueva variable ha sido creada. 
+pendiente //Comprueba en el vocabulario Tags que el nuevo término ha sido creado. 
+pendiente //Desinstala el módulo y comprueba qué pasa con esos elementos creados anteriormente.
+ 
+implementado 
+
+Implementar hook_uninstall(), de forma que elimine la variable de estado creada durante la instalación. 
+pendiente //Instalar y desinstalar el módulo, comprobando que la variable ha sido eliminada. 
+
+implementado
+
+///////////////////////////////////////
+
+Enrutamiento y menús
+
+Enrutamiento y menús - Ejercicio 1
+
+Define el módulo BITS Pages (bits_pages), y súbelo a la carpeta /modules/custom. 
+El módulo pertenecerá al paquete BITS.
+Crea la ruta bits_pages.simple (bits_pages.routing.yml) , la clase controladora y el método específico para esta página. 
+Está página mostrará el mensaje "Página con mensaje simple
+
+ejercicio ok
+
+
+Enrutamiento y menús - Ejercicio 2
+
+Define la ruta bits_pages.calculator (bits_pages.routing.yml), dentro del módulo BITS Pages (bits_pages), y su método controlador.
+Esta página es una calculadora (suma,resta,división,multiplicación, resto de la división)
+Añade a la ruta los parámetros opcionales 20 y 10.
+Comprueba el funcionamiento de la página, incluyendo varias combinaciones de parámetros y forzando la división por cero.
+
+ejercicio ok
+
+Enrutamiento y menús - Ejercicio 3
+
+
+
 
 
 
