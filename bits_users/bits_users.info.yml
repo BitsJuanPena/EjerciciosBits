@@ -1,0 +1,9 @@
+name: Bits Users
+type: module
+description: 'Description Bits User'
+package: BITS
+core: 8.x
+dependencies:
+  - drupal:block
+  - drupal:node
+

@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * file install and uninstal for module
+ * @utor ing. Juan Carlos Peña
+ */
+
+use Drupal\bits_forms\Fixtures;
+
+
+
+
+function bits_forms_schema() {
+
+    $schema['bits_forms_simple'] = array(
+        'description' => 'Stores Simple form data',
+        'fields' => array(
+        'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => "ID autoincrement",
+      ),
+        'title' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Title',
+      ),
+        'uid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The uid of the user who submitted the form.',
+      ),
+        'username' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Username',
+      ),
+        'email' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Email',
+      ),
+        'ip' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'User IP',
+      ),
+        'timestamp' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp indicating when the form was submitted.',
+      ),
+    ),
+      'primary key' => array('id'),
+      );
+      return $schema;
+}
+
+

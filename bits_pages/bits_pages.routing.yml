@@ -12,8 +12,10 @@ bits_pages.calculator:
   defaults:
     _controller: '\Drupal\bits_pages\Controller\BitsPagesController::calculator'
     _title: 'Page BITS Calculator'
+    p1: 10
+    p2: 20
   requirements:
-    _permission: 'access content'   
+    _permission: 'access calculator'
 
 
 bits_pages.links:
@@ -22,4 +24,4 @@ bits_pages.links:
     _controller: '\Drupal\bits_pages\Controller\BitsPagesController::links'
     _title: 'Page BITS Links'
   requirements:
-    _permission: 'access content'       
+    _permission: 'access content'

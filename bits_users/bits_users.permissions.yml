@@ -1,0 +1,9 @@
+access user block:
+  title: access user block
+  description: description access user block
+  restrict access: true
+
+configure extra user data:
+  title: configure extra user data
+  description: description configure extra user data
+  restrict access: true

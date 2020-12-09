@@ -1,0 +1,6 @@
+# Define default links for this module.
+bits_forms.simple:
+  title: Bits Forms Simple
+  description: Description Bits Forms Simple.
+  route_name: bits_forms.simple
+  expanded: TRUE
